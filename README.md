@@ -15,3 +15,47 @@ Couchbase Server Settings are in /config/yettings.yml
 |  GET | /:bucket/:key   | retrieves key from specified bucket                           |
 |  PUT | /:bucket/s/:key | creates or updates a document with key, post data is raw JSON |
 |  PUT | /:bucket/r/:key | replaces document, post data is raw JSON                      |
+
+POST data for set/add/replace takes this format:
+
+```javascript
+// Simple Value
+{
+  "post": {
+    "value": 1,
+    "options": {} 
+  }
+}
+
+// JSON Document as Value
+{
+  "post": {
+    "value": {
+      "name": "Heimerdinger",
+      "hero_type": "Mage"
+    },
+    "options": {} 
+  }
+}
+
+// Want Expiration/TTL? add to options
+{
+  "post": {
+    "value": "my string",
+    "options": {
+      "ttl": 30
+    } 
+  }
+}
+
+// Optimistic concurrency with CAS add to options, if provided it uses it
+{
+  "post": {
+    "value": "my string",
+    "options": {
+      "ttl": 30,
+      "cas": 17480574146356051968
+    } 
+  }
+}
+```
