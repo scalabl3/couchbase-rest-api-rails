@@ -1,4 +1,4 @@
-# Rails based REST interface for Couchbase #
+# CRUD REST interface for Couchbase in Rails #
 This is a simple REST interface for doing CRUD ops with Couchbase (get,set,add,replace,incr,decr). I need to add a few more, but it has a solid set of features. It can also do CAS with storage ops.
 
 ** Note there is not authentication of any sort in this (although that's not hard at all to add) **
