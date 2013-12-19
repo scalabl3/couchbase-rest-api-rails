@@ -77,3 +77,11 @@ Couchbase Server Settings are in /config/yettings.yml
   }
 }
 ```
+
+### TODO ###
+
+* Add Observe possibilities for Storage Operations (tricky with REST)
+* Add append/prepend operations
+* Add View Querying Route
+
+
