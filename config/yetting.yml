@@ -1,0 +1,20 @@
+defaults: &defaults
+
+  couchbase_servers: 
+    - 127.0.0.1
+  
+  couchbase_admin: Administrator
+  couchbase_admin_password: asdfasdf
+
+  couchbase_bucket: default
+  couchbase_bucket_password: 
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  
