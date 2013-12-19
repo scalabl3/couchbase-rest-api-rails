@@ -336,13 +336,18 @@ class ServeController < ApplicationController
       
     else
       @json.ddocs = c.design_docs
-      @json.messages << "Design Documents retrieved for bucket [#{b}]"
+      @json.messages << "Design Documents retrieved for bucket [#{c.bucket}]"
     end
     
     render json: @json
   end
   
-  
+  def views
+    c, @json = validate_bucket_connection(params)
+    return unless @json
+    
+    
+  end
   
   
   #workaround since Hash has a default method

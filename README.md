@@ -7,7 +7,7 @@ It's recommended to not expose Couchbase or any database to the public directly,
 I only use this thing on my home computers locally. You have been warned! :)
 
 #### Chrome Postman Template ####
-(https://www.getpostman.com/collections/537d27083fe84c20505d)
+(https://www.getpostman.com/collections/f62f69bc1d023d3de8c7)
 Create an environment that has host and port values for the rails app after it's running
 
 Couchbase Server Settings are in /config/yettings.yml

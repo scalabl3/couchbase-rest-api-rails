@@ -5,6 +5,8 @@ RubyCbEsBrowser::Application.routes.draw do
   get  "/ddocs" => 'serve#ddocs', defaults: { all: false }
   get  "/ddocs/all" => 'serve#ddocs', defaults: { all: true }
   
+  post  "/:bucket/dd/:ddoc/:view" => 'serve#views'
+  
   put  "/incr/:key/create" => 'serve#incr', defaults: { amount: 1, create: true } 
   put  "/incr/:key(/:amount)" => 'serve#incr', defaults: { amount: 1, create: false } 
   put  "/incr/:key(/:amount)/create" => 'serve#incr', defaults: { amount: 1, create: true } 
