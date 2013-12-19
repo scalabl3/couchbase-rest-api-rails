@@ -30,6 +30,9 @@ Couchbase Server Settings are in /config/yettings.yml
 |   PUT  | /decr/:key                 | same ops as incr, but decr in url                                 |
 | DELETE | /:key                      | DELETES document, default bucket                                  |
 | DELETE | /:bucket/:key              | DELETES document from specified bucket                            |
+|   GET  | /ddocs                     | retrieve Design Documents for default bucket                      |
+|   GET  | /ddocs/all                 | retrieve Design Documents for all buckets                         |
+|   GET  | /:bucket/ddocs             | retrieve Design Documents for specified bucket                    |
 
 ### PUT/POST data for set/add/replace takes this format: ###
 

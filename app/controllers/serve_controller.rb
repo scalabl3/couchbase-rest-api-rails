@@ -321,7 +321,26 @@ class ServeController < ApplicationController
     render json: @json
   end
   
-  
+  def ddocs
+    c, @json = validate_bucket_connection(params)
+    return unless @json
+    
+    if params[:all]
+      @json.messages << "Design Documents for all buckets requested"
+      @json.ddocs = Map.new
+      
+      $cb.connections.each_pair do |b, c|
+        @json.ddocs[b] = c.design_docs
+        @json.messages << "Design Documents retrieved for bucket [#{b}]"
+      end
+      
+    else
+      @json.ddocs = c.design_docs
+      @json.messages << "Design Documents retrieved for bucket [#{b}]"
+    end
+    
+    render json: @json
+  end
   
   
   

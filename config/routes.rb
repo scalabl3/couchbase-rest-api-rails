@@ -1,6 +1,10 @@
 RubyCbEsBrowser::Application.routes.draw do
   #get "/test/:op" => 'serve#test'
 
+  get  "/:bucket/ddocs" => 'serve#ddocs', defaults: { all: false }
+  get  "/ddocs" => 'serve#ddocs', defaults: { all: false }
+  get  "/ddocs/all" => 'serve#ddocs', defaults: { all: true }
+  
   put  "/incr/:key/create" => 'serve#incr', defaults: { amount: 1, create: true } 
   put  "/incr/:key(/:amount)" => 'serve#incr', defaults: { amount: 1, create: false } 
   put  "/incr/:key(/:amount)/create" => 'serve#incr', defaults: { amount: 1, create: true } 
@@ -14,14 +18,16 @@ RubyCbEsBrowser::Application.routes.draw do
   put  "/:bucket/decr/:key(/:amount)" => 'serve#decr', defaults: { amount: 1, create: false }
   
   post "/:bucket/a/:key" => 'serve#add'
-  put "/:bucket/s/:key" => 'serve#set'
-  put "/:bucket/r/:key" => 'serve#replace'
+  put  "/:bucket/s/:key" => 'serve#set'
+  put  "/:bucket/r/:key" => 'serve#replace'
 
   delete "/:bucket/:key" => 'serve#delete'
   delete "/:key" => 'serve#delete'
   
   get  "/:key" => 'serve#get'
   get  "/:bucket/:key" => 'serve#get'
+  
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.
