@@ -1,7 +1,7 @@
 # Rails based REST interface for Couchbase #
 This is a simple REST interface for doing CRUD ops with Couchbase (get,set,add,replace,incr,decr). I need to add a few more, but it has a solid set of features. It can also do CAS with storage ops.
 
-** Note there is not authentication of any sort in this (although that's not hard at all to add)
+** Note there is not authentication of any sort in this (although that's not hard at all to add) **
 
 #### Chrome Postman Template ####
 (https://www.getpostman.com/collections/537d27083fe84c20505d)
