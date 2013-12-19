@@ -9,6 +9,8 @@ Create an environment that has host and port values for the rails app after it's
 
 Couchbase Server Settings are in /config/yettings.yml
 
+### Operations ###
+
 |  VERB  | URL                        | DESC                                                              |
 |:------:|----------------------------|-------------------------------------------------------------------|
 |   GET  | /:key                      | GET document with key from "default" bucket                       |
@@ -26,7 +28,7 @@ Couchbase Server Settings are in /config/yettings.yml
 | DELETE | /:key                      | DELETES document, default bucket                                  |
 | DELETE | /:bucket/:key              | DELETES document from specified bucket                            |
 
-POST data for set/add/replace takes this format:
+### PUT/POST data for set/add/replace takes this format: ###
 
 ```javascript
 // Simple Value
