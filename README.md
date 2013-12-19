@@ -3,7 +3,7 @@ This is a simple REST interface for doing CRUD ops with Couchbase (get,set,add,r
 
 ** Note there is not authentication of any sort in this (although that's not hard at all to add)
 
-#### Chrome Postman Operations ####
+#### Chrome Postman Template ####
 (https://www.getpostman.com/collections/537d27083fe84c20505d)
 Create an environment that has host and port values for the rails app after it's running
 
